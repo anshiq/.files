@@ -1,0 +1,5 @@
+xdg-mime default thunar.desktop inode/directory 
+install vscode and if on debian install nvim from source also 
+you can also remove or modify .bashrc in manjaro or arched base not in debian
+
+stow --adopt vim
