@@ -1,10 +1,4 @@
--- Read uthe docs: https://www.lunarvim.org/docs/configuration
--- Video Tutorials: https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6
--- Forum: https://www.reddit.com/r/lunarvim/
--- Discord: https://discord.com/invite/Xb9B4Ny
 lvim.colorscheme = "dracula"
--- lvim.keys.normal_mode["n"] = ":BufferLineCycleNext<CR>"
--- lvim.keys.normal_mode["N"] = ":BufferLineCyclePrev<CR>"
 lvim.plugins = {
   "lunarvim/darkplus.nvim",
   'neovim/nvim-lspconfig',
@@ -12,8 +6,12 @@ lvim.plugins = {
   'MunifTanjim/prettier.nvim',
   'MunifTanjim/eslint.nvim',
   'Mofiqul/dracula.nvim',
-  -- load required null-ls references
-  -- local methods = require("null-ls.methods")
+  {
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    config = function()
+      require("lsp_lines").setup()
+    end,
+  }
   -- {
   --       "tzachar/cmp-tabnine",
   --       run = "./install.sh",
@@ -31,6 +29,9 @@ lvim.plugins = {
   --     },
 
 }
+vim.diagnostic.config({
+  virtual_text = false,
+})
 local null_ls = require("null-ls")
 local eslint = require("eslint")
 
