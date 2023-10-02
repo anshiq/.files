@@ -1,3 +1,4 @@
+use gnome-tweaks
 ![](preview/candy.png)
 
 >An icon theme colored with sweet gradients
