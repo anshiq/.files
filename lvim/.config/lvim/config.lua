@@ -4,34 +4,35 @@ lvim.format_on_save.enabled = true
 lvim.colorscheme = "dracula"
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
+vim.opt.cmdheight = 0
 lvim.plugins = {
-  "lunarvim/darkplus.nvim",
-  'neovim/nvim-lspconfig',
-  'jose-elias-alvarez/null-ls.nvim',
-  'MunifTanjim/prettier.nvim',
-  'MunifTanjim/eslint.nvim',
-  'Mofiqul/dracula.nvim',
-  -- {
-  --   url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-  --   config = function()
-  --     require("lsp_lines").setup()
-  --   end,
-  -- }
-  -- {
-  --       "tzachar/cmp-tabnine",
-  --       run = "./install.sh",
-  --       requires = "hrsh7th/nvim-cmp",
-  --       config = function()
-  --         local tabnine = require "cmp_tabnine.config"
-  --         tabnine:setup {
-  --           max_lines = 1000,
-  --           max_num_results = 10,
-  --           sort = true,
-  --         }
-  --       end,
-  --       opt = true,
-  --       event = "InsertEnter",
-  --     },
+    "lunarvim/darkplus.nvim",
+    'neovim/nvim-lspconfig',
+    'jose-elias-alvarez/null-ls.nvim',
+    'MunifTanjim/prettier.nvim',
+    'MunifTanjim/eslint.nvim',
+    'Mofiqul/dracula.nvim',
+    -- {
+    --   url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    --   config = function()
+    --     require("lsp_lines").setup()
+    --   end,
+    -- }
+    -- {
+    --       "tzachar/cmp-tabnine",
+    --       run = "./install.sh",
+    --       requires = "hrsh7th/nvim-cmp",
+    --       config = function()
+    --         local tabnine = require "cmp_tabnine.config"
+    --         tabnine:setup {
+    --           max_lines = 1000,
+    --           max_num_results = 10,
+    --           sort = true,
+    --         }
+    --       end,
+    --       opt = true,
+    --       event = "InsertEnter",
+    --     },
 
 }
 -- vim.diagnostic.config({
