@@ -9,6 +9,7 @@ mkdir -p ~/.local/share/fonts
 sudo npm i -g n
 mkdir "${HOME}/.npm-packages"
 npm config set prefix "${HOME}/.npm-packages"
+npm install -g @anshik/gfile   
 curl -fsSL https://bun.sh/install | bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
