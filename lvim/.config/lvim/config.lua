@@ -11,7 +11,12 @@ lvim.plugins = {
     'jose-elias-alvarez/null-ls.nvim',
     'MunifTanjim/prettier.nvim',
     'MunifTanjim/eslint.nvim',
+    "scottmckendry/cyberdream.nvim",
     'Mofiqul/dracula.nvim',
+    {
+        'Exafunction/codeium.vim',
+        event = 'BufEnter'
+    },
     -- {
     --   url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
     --   config = function()
