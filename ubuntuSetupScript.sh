@@ -11,7 +11,7 @@ sudo apt update && sudo apt upgrade -y || { echo "Failed to update/upgrade packa
 
 # Install essential packages
 echo "Installing essential packages..."
-sudo apt install nano build-essential tmux golang git wget npm thunar curl fish software-properties-common -y || { echo "Failed to install essential packages"; exit 1; }
+sudo apt install nano build-essential tmux unzip golang git wget npm thunar curl fish software-properties-common -y || { echo "Failed to install essential packages"; exit 1; }
 
 # Install Helix editor
 echo "Installing Helix editor..."
