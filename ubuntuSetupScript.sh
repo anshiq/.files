@@ -11,7 +11,7 @@ sudo apt update && sudo apt upgrade -y || { echo "Failed to update/upgrade packa
 
 # Install essential packages
 echo "Installing essential packages..."
-sudo apt install nano build-essential tmux unzip golang git wget npm thunar curl fish software-properties-common -y || { echo "Failed to install essential packages"; exit 1; }
+sudo apt install nano build-essential tmux unzip git wget npm thunar curl fish software-properties-common -y || { echo "Failed to install essential packages"; exit 1; }
 
 # Install Helix editor
 echo "Installing Helix editor..."
@@ -89,6 +89,7 @@ fi
 
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/go/bin
 export EDITOR=hx
 export PAGER=less
 export LSCOLORS=gxfxcxdxbxegedabagacad
@@ -162,6 +163,8 @@ fish_add_path $HOME/.local/jdtls/bin
 # Go
 set -gx GOPATH $HOME/.go
 fish_add_path $GOPATH/bin
+fish_add_path $GOPATH/go/bin
+
 
 # Set the default editor to helix
 set -gx EDITOR hx
