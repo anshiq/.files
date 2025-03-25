@@ -27,6 +27,13 @@ fi
 echo "Creating local bin directory..."
 mkdir -p ~/.local/bin
 
+# golang
+# Create .go directory first
+mkdir -p ~/.go
+wget https://go.dev/dl/go1.24.1.linux-amd64.tar.gz 
+tar -C ~/.go -xzf go1.24.1.linux-amd64.tar.gz
+rm go1.24.1.linux-amd64.tar.gz  # Remove the downloaded tarball
+
 # rust
 
 set +e  # Prevent the script from exiting on errors
@@ -54,6 +61,7 @@ fi
 # Symlink rust-analyzer if it exists
 which rust-analyzer > /dev/null 2>&1
 if [ $? -eq 0 ]; then
+    rustup component add rust-analyzer 
     sudo ln -s $HOME/.cargo/bin/rust-analyzer /usr/local/bin/rust-analyzer
     if [ $? -ne 0 ]; then
         echo "Failed to symlink rust-analyzer" >&2
